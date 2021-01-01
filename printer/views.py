@@ -16,8 +16,8 @@ def index(request):
 def call_bash(file):
   fs = FileSystemStorage()
   filename = fs.save(file.name, file)
-  print(settings.MEDIA_ROOT + "\\" + filename)
-  # subprocess.Popen(['printer.sh', abs_path])
+  abs_path = settings.MEDIA_ROOT + "/" + filename
+  subprocess.Popen(['./printer.sh', abs_path])
   return
 
 
