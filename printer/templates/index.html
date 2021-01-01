@@ -10,6 +10,7 @@
     <div class="container">
       <div class="position-absolute top-50 start-50 translate-middle">
         <h1 class="text-center">Printer Sabeb</h1>
+        <h4 class="text-center">Printer : {{printer}}</h4>
 
         <form action="{% url 'printer:index' %}" method="POST" class="mt-4" enctype="multipart/form-data">
           {% csrf_token %}
